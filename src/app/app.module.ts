@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // material design
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
 
 import { NewEntryComponent } from './new-entry/new-entry.component';
 
@@ -43,6 +43,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     MatCardModule,
     MatSelectModule,
+    MatToolbarModule,
 
   ],
   providers: [EntryService],

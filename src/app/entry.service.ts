@@ -14,4 +14,8 @@ export class EntryService {
   getAll(){
     return this.http.get(this.baseUrl);
   }
+
+  createEntry(entry){
+    return this.http.post(this.baseUrl, entry);
+  }
 }
