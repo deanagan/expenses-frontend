@@ -15,13 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
 // material design
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule,
-        MatDialogModule} from '@angular/material';
+        MatDialogModule, MatListModule} from '@angular/material';
 
 import { NewEntryComponent } from './new-entry/new-entry.component';
 
 // forms
 import {ReactiveFormsModule} from '@angular/forms';
 import { UpdateEntryComponent } from './update-entry/update-entry.component';
+import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { UpdateEntryComponent } from './update-entry/update-entry.component';
     FooterComponent,
     HeaderComponent,
     NewEntryComponent,
-    UpdateEntryComponent
+    UpdateEntryComponent,
+    DeleteEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { UpdateEntryComponent } from './update-entry/update-entry.component';
     MatSelectModule,
     MatToolbarModule,
     MatDialogModule,
+    MatListModule,
 
   ],
   entryComponents:[UpdateEntryComponent],

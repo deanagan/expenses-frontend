@@ -11,6 +11,10 @@ export class EntryService {
 
   constructor(private http: HttpClient) { }
 
+  getEntry(id){
+    return this.http.get(this.baseUrl+'/'+id);
+  }
+
   getAll(){
     return this.http.get(this.baseUrl);
   }
@@ -21,5 +25,9 @@ export class EntryService {
 
   updateEntry(id, entry){
     return this.http.put(this.baseUrl+'/'+id, entry);
+  }
+
+  deleteEntry(id) {
+    return this.http.delete(this.baseUrl+'/'+id);
   }
 }
