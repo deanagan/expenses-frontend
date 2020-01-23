@@ -9,20 +9,25 @@ import { HeaderComponent } from './header/header.component';
 
 // services
 import { EntryService } from './entry.service';
+import { AuthService } from './auth.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 
 // material design
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule,
-        MatDialogModule, MatListModule} from '@angular/material';
+        MatDialogModule, MatListModule, MatSortModule} from '@angular/material';
 
+// components
 import { NewEntryComponent } from './new-entry/new-entry.component';
+import { UpdateEntryComponent } from './update-entry/update-entry.component';
+import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 // forms
 import {ReactiveFormsModule} from '@angular/forms';
-import { UpdateEntryComponent } from './update-entry/update-entry.component';
-import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +38,9 @@ import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
     HeaderComponent,
     NewEntryComponent,
     UpdateEntryComponent,
-    DeleteEntryComponent
+    DeleteEntryComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,7 @@ import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
     // material design
 
     ReactiveFormsModule,
+    FormsModule,
     AppRouterModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -51,10 +59,11 @@ import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
     MatToolbarModule,
     MatDialogModule,
     MatListModule,
+    MatSortModule,
 
   ],
   entryComponents:[UpdateEntryComponent],
-  providers: [EntryService],
+  providers: [EntryService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
